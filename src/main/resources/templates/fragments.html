@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title>KC House Listing</title>
+<!--    we can use bellow lines if we want to include locally build css and javascript instead of bootstrap-->
+<!--    <script th:src="@{/script.js}"></script>-->
+<!--    <link th:href="@{/style.css}" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav th:fragment="header">
+    <h1 th:text="${title}">KC House Listing</h1>
+    <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="/house">All Listings</a></li>
+        <li class="nav-item"><a class="nav-link" href="/house/add">Add House</a></li>
+        <li class="nav-item"><a class="nav-link" href="/house/delete">Delete HouseListings</a></li>
+    </ul>
+</nav>
+</body>
+</html>
