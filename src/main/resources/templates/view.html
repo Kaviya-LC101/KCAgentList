@@ -12,14 +12,22 @@
     <tr>
         <th>ID</th>
         <th>House</th>
-        <th>Address</th>
+        <th>Location</th>
+        <th>Price</th>
+        <th>Year Built</th>
+        <th>Status</th>
+
     </tr>
     </thead>
 
     <tr th:each="houseList:${houseLists}">
         <td th:text="${houseList.id}"></td>
         <td th:text="${houseList.houseDescription}"></td>
-        <td th:text="${houseList.address}"></td>
+        <td th:text="${houseList.location}"></td>
+        <td th:text="${houseList.price}+K"></td>
+        <td th:text="${houseList.yearBuilt}"></td>
+        <td th:text="${houseList.status}"></td>
+
     </tr>
 </table>
 </body>
