@@ -1,17 +1,23 @@
 package org.Housing.KCAgentList.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
+
 import java.util.Objects;
 
-
+@Entity
 public class HouseList {
 
+    @Id
+    @GeneratedValue
     private int id;
-    private static int nextid=1;
 
     @NotBlank(message="Enter House Description")
     @Size(min=6,max=100,message="Description must be between 6 and 100 characters")
@@ -26,10 +32,12 @@ public class HouseList {
 
     private String yearBuilt;
 
-    private StatusType status;
+    @NotNull
+    @ManyToOne
+    private StatusCategories status;
 
-    public HouseList(String houseDescription, String location,float price,String yearBuilt,StatusType status){
-        this();
+    public HouseList(String houseDescription, String location,float price,String yearBuilt, StatusCategories status){
+
         this.houseDescription=houseDescription;
         this.location =location;
         this.price=price;
@@ -37,10 +45,7 @@ public class HouseList {
         this.status=status;
          }
 
-    public HouseList() {
-        this.id=nextid;
-        nextid++;
-    }
+    public HouseList() {}
 
     public String getHouseDescription() {
         return houseDescription;
@@ -78,11 +83,11 @@ public class HouseList {
         this.yearBuilt = yearBuilt;
     }
 
-    public StatusType getStatus() {
+    public StatusCategories getStatus() {
         return status;
     }
 
-    public void setStatus(StatusType status) {
+    public void setStatus(StatusCategories status) {
         this.status = status;
     }
 

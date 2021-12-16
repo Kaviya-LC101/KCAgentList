@@ -4,16 +4,31 @@
 <body class ="container">
 <header th:replace="fragments :: header"></header>
 <form method="post">
-
-    <th:block th:each="houseList:${houseLists}">
-        <div class="form-group">
-          <label>
-             <span th:text="${houseList.houseDescription}"></span>
-            <input type="checkbox" name="houseIds" th:value="${houseList.id}" class="form-control">
-         </label>
-        </div>
-    </th:block>
-
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>House Description</th>
+        <th>Location</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Year Built</th>
+    </tr>
+    </thead>
+    <tr th:each="houseList:${houseLists}">
+       <div class="form-group">
+           <td th:text="${houseList.id}"></td>
+           <td th:text="${houseList.houseDescription}"></td>
+           <td th:text="${houseList.location}"></td>
+           <td th:text="${houseList.price}"></td>
+           <td th:text="${houseList.status.statusName}"></td>
+           <td th:text="${houseList.yearBuilt}"></td>
+           <td>
+               <input type="checkbox" name="houseIds" th:value="${houseList.id}" class="form-control">
+           </td>
+         </div>
+    </tr>
+</table>
     <input type="submit" value="Delete" class="btn btn-danger">
 </form>
 </body>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class ="container">
+<header th:replace="fragments :: header"></header>
+<!--One of the below statment will execute depending on whether there are any houses listed or not-->
+
+<h2 th:if="${statusLists} and ${statusLists.size()}">All Listings</h2>
+<table class="table table-striped">
+    <thead>
+       <th>ID</th>
+       <th>Status Name</th>
+    </thead>
+    <tr th:each="statusList:${statusLists}">
+        <td th:text="${statusList.id}"></td>
+        <td th:text="${statusList.statusName}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

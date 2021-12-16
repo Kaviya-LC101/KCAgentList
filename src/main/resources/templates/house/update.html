@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
 <head th:replace="fragments :: head"></head>
 <body class ="container">
 <header th:replace="fragments :: header"></header>
-<<form method="get" action="/house/updateDetails">
+<form method="get" action="/house/updateDetails">
     <table class="table table-stripped">
         <thead>
         <tr>
@@ -16,28 +16,19 @@
             <th>Action</th>
         </tr>
         </thead>
-<!--    <th:block th:each="houseList:${houseLists}">-->
-<!--        <div class="form-group">-->
-<!--            <label>-->
-<!--                <span th:text="${houseList.houseDescription}"></span>-->
-<!--                <span th:text="${houseList.location}"></span>-->
-<!--             <input type="hidden" name="houseId" th:value="${houseList.id}" class="form-control">&ndash;&gt;-->
-<!--                <br>-->
-<!--                <input type="submit" value="update" class="btn btn-success">-->
-<!--            </label>-->
-<!--        </div>-->
-<!--    </th:block>-->
+
         <tr th:each="houseList:${houseLists}">
+            <div>
             <td th:text="${houseList.id}"></td>
             <td th:text="${houseList.houseDescription}"></td>
             <td th:text="${houseList.location}"></td>
             <td th:text="${houseList.price}"></td>
-            <td th:text="${houseList.status}"></td>
+            <td th:text="${houseList.status.statusName}"></td>
             <td th:text="${houseList.yearBuilt}"></td>
             <td>
-                <input type="hidden" name="houseId" th:value="${houseList.id}" class="form-control">
-                <input type="submit" value="update" class="btn btn-success">
+                <a th:id="a+${houseList.id}"  value="update" class="btn btn-success" th:href="@{/house/updateDetails?houseId={houseId}(houseId=${houseList.id})}">Update</a>
             </td>
+            </div>
         </tr>
 
     </table>

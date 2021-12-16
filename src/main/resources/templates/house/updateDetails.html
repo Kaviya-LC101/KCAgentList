@@ -27,8 +27,8 @@
             <!--            <input th:feild="${houseList.status}" class="form-control">-->
             <select th:field="${houseList.status}">
                 <option th:each="type : ${types}"
-                        th:value="${type}"
-                        th:text="${type.displayName}">
+                        th:value="${type.id}"
+                        th:text="${type.statusName}">
                 </option>
             </select>
         </label>
