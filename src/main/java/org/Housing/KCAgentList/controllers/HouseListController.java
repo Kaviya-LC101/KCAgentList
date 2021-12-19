@@ -23,13 +23,6 @@ public class HouseListController {
    @Autowired
    private StatusCategoriesRepository statusCategoriesRepository;
 
-    @GetMapping
-    public String displayAllListings(Model model){
-        model.addAttribute("title","All Listings");
-        model.addAttribute("houseLists", houseListRepository.findAll());
-        return "view";
-    }
-
     @GetMapping("add")
     public String renderAddListingsForm(Model model){
         model.addAttribute("title","Add House");
@@ -42,11 +35,12 @@ public class HouseListController {
     public String addListings(@ModelAttribute @Valid HouseList newHouseList, Errors errors,Model model){
         if(errors.hasErrors()){
             model.addAttribute("title","Add House");
+            model.addAttribute("types", statusCategoriesRepository.findAll());
             return("house/add");
         }
 
        houseListRepository.save(newHouseList);
-        return "redirect:";
+        return "redirect:/view";
     }
     @GetMapping("delete")
     public String displayDeleteHouseListForm(Model model){
@@ -63,7 +57,7 @@ public class HouseListController {
         }
 
 
-        return "redirect:";
+        return "redirect:/view";
     }
 
     @GetMapping("update")
@@ -85,20 +79,19 @@ public class HouseListController {
     }
 
     @PostMapping("updateDetails")
-    public String processUpdateDetailsForm(int houseId, String houseDescription, String location, float price, Integer status, String yearBuilt,Model model){
-        Optional<HouseList> opphouseEdit=houseListRepository.findById(houseId);
-        HouseList houseListToEdit=(HouseList) opphouseEdit.get();
-        houseListToEdit.setLocation(location);
-        houseListToEdit.setPrice(price);
-        houseListToEdit.setYearBuilt(yearBuilt);
-        Optional <StatusCategories> oppStatus=statusCategoriesRepository.findById(status);
-        StatusCategories newstatus=(StatusCategories) oppStatus.get();
-        houseListToEdit.setStatus(newstatus);
-        houseListRepository.save(houseListToEdit);
+    public String processUpdateDetailsForm(int houseId, String houseDescription, String location, float price, Integer status, String yearBuilt) {
+            Optional<HouseList> opphouseEdit = houseListRepository.findById(houseId);
+            HouseList houseListToEdit = (HouseList) opphouseEdit.get();
+            houseListToEdit.setHouseDescription(houseDescription);
+            houseListToEdit.setLocation(location);
+            houseListToEdit.setPrice(price);
+            houseListToEdit.setYearBuilt(yearBuilt);
+            Optional<StatusCategories> oppStatus = statusCategoriesRepository.findById(status);
+            StatusCategories newstatus = (StatusCategories) oppStatus.get();
+            houseListToEdit.setStatus(newstatus);
+            houseListRepository.save(houseListToEdit);
+            return "redirect:/view";
 
-        return "redirect:";
     }
-
-
 
 }

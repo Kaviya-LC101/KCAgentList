@@ -29,7 +29,6 @@
     </div>
     <div class="form-group">
         <label>Status
-<!--            <input th:feild="${houseList.status}" class="form-control">-->
             <select th:field="${houseList.status}">
                 <option th:each="type : ${types}"
                         th:value="${type.id}"
