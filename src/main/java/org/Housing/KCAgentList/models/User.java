@@ -8,7 +8,8 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class User {
+public class
+User {
     @Id
     @GeneratedValue
     private int id;

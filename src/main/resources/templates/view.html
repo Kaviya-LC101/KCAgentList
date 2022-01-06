@@ -3,7 +3,7 @@
 <head th:replace="fragments :: head"></head>
 <body class ="container">
 <header th:replace="fragments :: header"></header>
-<!--One of the below statment will execute depending on whether there are any houses listed or not-->
+<!--One of the below statement will execute depending on whether there are any houses listed or not-->
 <h2 th:unless="${houseLists} and ${houseLists.size()}">No House Listings</h2>
 <h2 th:if="${houseLists} and ${houseLists.size()}">All Listings</h2>
 

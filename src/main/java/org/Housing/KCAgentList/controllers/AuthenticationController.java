@@ -1,5 +1,6 @@
 package org.Housing.KCAgentList.controllers;
 
+import org.Housing.KCAgentList.data.HouseListRepository;
 import org.Housing.KCAgentList.data.UserRepository;
 import org.Housing.KCAgentList.models.User;
 import org.Housing.KCAgentList.models.dto.LoginFormDTO;
@@ -22,6 +23,9 @@ public class AuthenticationController {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    private HouseListRepository houseListRepository;
 
     private static final String userSessionKey = "user";
 
@@ -110,8 +114,8 @@ public class AuthenticationController {
         }
 
         setUserInSession(request.getSession(), theUser);
-
-        return "redirect:";
+        model.addAttribute("houseLists", houseListRepository.findAll());
+        return "view";
     }
     @GetMapping("/logout")
     public String logout(HttpServletRequest request){
