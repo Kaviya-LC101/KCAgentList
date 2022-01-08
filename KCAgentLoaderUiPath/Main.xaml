@@ -1,0 +1,194 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1165,2884" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="66">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="26">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="570,2819" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtHouseList" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: KC House Listing" sap:VirtualizedContainerService.HintSize="528,2727" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="974f2de3-0b6d-4f3d-abdd-6029989e6a5f" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="494,2511" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="452,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452,2356" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ReadRange AddHeaders="True" DataTable="[dtHouseList]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="410,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="KCHouses.xlsx">
+                <ui:ReadRange.Range>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </ui:ReadRange.Range>
+              </ui:ReadRange>
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtHouseList]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="410,2011" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="drHouses" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,1890" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="status" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT houseDescription'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="974f2de3-0b6d-4f3d-abdd-6029989e6a5f" Text="[drHouses.Item(&quot;House&quot;).ToString]" Version="V1">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="http://localhost:8080/house/add" DesignTimeRectangle="413, 293, 200, 38" ElementType="InputBox" FriendlyName="'INPUT houseDescription'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='' aaname='' /&gt;" Guid="60a12f27-f309-4b06-ac82-4930ac273056" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAqCAYAAAD/P7RtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEKSURBVHhe7d0xS8RAFIVR//+PE4vFQrGwsBLBRrEJIxd2swnZ1b11zoHXZKb9yHTvbgA3EwwUVsF8ff+Ml9e38fD4PO4PT8bsdtJAWkgTS3MwOcil94/PMU3T8SvsUxpIC2liGc0cTGrKBeAsTaSNkzmYlOTPAmtpIm2czMHk3QZsLdsQDPxDMFAQDBQEAwXBQEEwUBAMFAQDBcFAQTBQEAwUBAMFwUBBMFAQDBQEAwXBQEEwUBAMFAQDBcFAQTBQEAwUBAMFwUBBMFAQDBQEAwXBQOFiMNZdwNbVdRcWKsHW1YVKVvbBWRpIC2ni4sq+yEFqyqW824zZ66SBtLCMJVbBAH8TDNxsjF+nrnbZlenUVgAAAABJRU5ErkJggg==" InformativeScreenshot="0edfd2e300bbf5f355da26902c58cabb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='KC House Listing' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT location'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="974f2de3-0b6d-4f3d-abdd-6029989e6a5f" Text="[drHouses.Item(&quot;Location&quot;).ToString]" Version="V1">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="http://localhost:8080/house/add" DesignTimeRectangle="413, 382, 200, 38" ElementType="InputBox" FriendlyName="'INPUT location'" FullSelectorArgument="&lt;webctrl id='location' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='location' tag='INPUT' type='' aaname='' /&gt;" Guid="84c30bb9-e4f2-4760-b0de-a85c0162adaf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAqCAYAAAD/P7RtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEKSURBVHhe7d0xS8RAFIVR//+PE4vFQrGwsBLBRrEJIxd2swnZ1b11zoHXZKb9yHTvbgA3EwwUVsF8ff+Ml9e38fD4PO4PT8bsdtJAWkgTS3MwOcil94/PMU3T8SvsUxpIC2liGc0cTGrKBeAsTaSNkzmYlOTPAmtpIm2czMHk3QZsLdsQDPxDMFAQDBQEAwXBQEEwUBAMFAQDBcFAQTBQEAwUBAMFwUBBMFAQDBQEAwXBQEEwUBAMFAQDBcFAQTBQEAwUBAMFwUBBMFAQDBQEAwXBQOFiMNZdwNbVdRcWKsHW1YVKVvbBWRpIC2ni4sq+yEFqyqW824zZ66SBtLCMJVbBAH8TDNxsjF+nrnbZlenUVgAAAABJRU5ErkJggg==" InformativeScreenshot="8e12d8814cd3f96b9d562de1dd1195e1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='KC House Listing' /&gt;" SearchSteps="FuzzySelector, Image" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '0.0'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="974f2de3-0b6d-4f3d-abdd-6029989e6a5f" Text="[drHouses.Item(&quot;Price&quot;).ToString]" Version="V1">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="http://localhost:8080/house/add" DesignTimeRectangle="413, 471, 200, 38" ElementType="InputBox" FriendlyName="'0.0'" FullSelectorArgument="&lt;webctrl id='price' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='price' tag='INPUT' type='' aaname='' /&gt;" Guid="fd9dbcfc-4cec-4161-a46a-8700ee447ae5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAqCAYAAAD/P7RtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFBSURBVHhe7d0/S8NQFMZhv56bm99aHMRBcXBwEsFFcQlXXrBp+ic2B1NS7PPAGZrc8f5otnPRgMkEAwUbwXx8frWn55d2e//Ybu4ejDnbSQNpIU0M9cHkRQ69vr23rut+nsJ5SgNpIU0Mo+mDSU05AKylibSx0geTkvyzwKY0kTZW+mDy3QbsGrYhGDhAMFAgGCgQDBQIBgoEAwWCgQLBQIFgoEAwUHCUYC6vrvuZonoeljJ7MNuX/lAE1fOwpFmDGbvscz2HpQkGCgQDBYKBAsFAgWCgQDBQMGswsX3Z//obTsnswUQu/Wq2jT0bOw+n5CjBwH8lGCgQDBQIBgoEAwWCgQLBQIFgoGBvMNZdwK7RdRcWKsGu0YVKVvbBWhpIC2li78q+yIvUlEP5bjPmXCcNpIVhLLERDPA7wcBkrX0DDVkQT8fBnr0AAAAASUVORK5CYII=" InformativeScreenshot="350dee2efc003ab989ce2c751c7bdca8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='KC House Listing' /&gt;" SearchSteps="FuzzySelector, Image" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[status]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[drHouses.Item("Status").ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <uix:NSelectItem DisplayName="Select Item 'In Listing'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[status]" ScopeIdentifier="974f2de3-0b6d-4f3d-abdd-6029989e6a5f" Version="V1">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="5">
+                            <x:String>In Listing</x:String>
+                            <x:String>Commin Soon</x:String>
+                            <x:String>Price Increased</x:String>
+                            <x:String>Sold</x:String>
+                            <x:String>price decreased</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="http://localhost:8080/house/add" DesignTimeRectangle="466, 533, 147, 29" ElementType="DropDown" FriendlyName="'In Listing'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" Guid="f4d05950-6074-42a2-9049-ad3eb647208e" InformativeScreenshot="6ea37f8d4108beff923fc1ad61a5128c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='KC House Listing' /&gt;" SearchSteps="FuzzySelector" />
+                        </uix:NSelectItem.Target>
+                      </uix:NSelectItem>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT yearBuilt'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="974f2de3-0b6d-4f3d-abdd-6029989e6a5f" Text="[drHouses.Item(&quot;YearBuilt&quot;).ToString]" Version="V1">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="http://localhost:8080/house/add" DesignTimeRectangle="413, 613, 200, 38" ElementType="InputBox" FriendlyName="'INPUT yearBuilt'" FullSelectorArgument="&lt;webctrl id='yearBuilt' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='yearBuilt' tag='INPUT' type='' aaname='' /&gt;" Guid="0bac7d5d-37ba-4f45-a041-905fd0f9da9d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAqCAYAAAD/P7RtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEKSURBVHhe7d0xS8RAFIVR//+PE4vFQrGwsBLBRrEJIxd2swnZ1b11zoHXZKb9yHTvbgA3EwwUVsF8ff+Ml9e38fD4PO4PT8bsdtJAWkgTS3MwOcil94/PMU3T8SvsUxpIC2liGc0cTGrKBeAsTaSNkzmYlOTPAmtpIm2czMHk3QZsLdsQDPxDMFAQDBQEAwXBQEEwUBAMFAQDBcFAQTBQEAwUBAMFwUBBMFAQDBQEAwXBQEEwUBAMFAQDBcFAQTBQEAwUBAMFwUBBMFAQDBQEAwXBQOFiMNZdwNbVdRcWKsHW1YVKVvbBWRpIC2ni4sq+yEFqyqW824zZ66SBtLCMJVbBAH8TDNxsjF+nrnbZlenUVgAAAABJRU5ErkJggg==" InformativeScreenshot="ac2a71e1e9f43f944aa7e58d74ffa271.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='KC House Listing' /&gt;" SearchSteps="FuzzySelector, Image" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'Add House'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="974f2de3-0b6d-4f3d-abdd-6029989e6a5f" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="http://localhost:8080/house/add" DesignTimeRectangle="413, 675, 102, 38" ElementType="Button" FriendlyName="'Add House'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Add House' check:text='Add House' /&gt;" Guid="b657b177-4115-40a3-9c47-2ebc156a42ed" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAqCAYAAABbec77AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHlSURBVHhe7ZvBTcNQEEQphwNtcKAJmqCoiCLoghM9UIPRHMaarNbf68TEm2ie9KT9s98gZRQpFz9N5i5wUXfCWVHfvz/T+9fH9PL5Nj2fXu0B4rNHB+hCmYvCwgX1EV1oWXNRaDF7wB4nOiFzUf429ROdkLmo7KI9XuKimktcVHOJi2oucVHNJS6qucRFNZe4qOYSF9VccnhRlf9dufOokl2LItluycr90Z3RDq7tu0tcVHPJbkXp39B5zcrd0Z3RDq7tu0tuXpTC8yV36GgHs72S7WKW5Yrm1X1VctOiYk5iFs9AM3W0g3G/9ZzlOl9y3iLZpajs+ZjFc5brrC7lsILe1WezXGdVc52j2S7LqpKHKCrLqe51VjXXWY050UzzSLxXlVxd1Bp6T5/Lcp3VpRyOdlD3Oqua66xW83i+VrJLUVkOdaezqrnO6lIORzuoe51VzXVWl3KoO533kFxVVOU5vaMzzyBm8Qw0U0c7GPdr5ywjo/2W8xbJTYvimWT76h062sFsr8QdVXge7aNKtq9KdvkxYf9P4qKaS1xUc4mLai5xUc0lLqq5xEU1l7io5hIX1VwyF+XXbvqZvnbjF9n6mb7I5ldDe4ku0ldDARZo0YUdJz57dKAlgbOiTF9c1F0wTX+KYNL1+4W5aQAAAABJRU5ErkJggg==" InformativeScreenshot="35b479c6b6144eb772f84b3eb688eb00.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='KC House Listing' /&gt;" SearchSteps="FuzzySelector, Image" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                      <uix:NClick ClickType="Single" DisplayName="Click 'Add House'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="974f2de3-0b6d-4f3d-abdd-6029989e6a5f" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="http://localhost:8080/view" DesignTimeRectangle="529, 167, 122, 43" ElementType="Text" FriendlyName="'Add House'" FullSelectorArgument="&lt;webctrl aaname='Add House' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Add House' tag='A' type='' check:text='Add House' /&gt;" Guid="b6cf6954-4746-45cc-81ab-74f6a9f24c41" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH4AAAAvCAYAAAAl8X7aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGzSURBVHhe7ZbtagUxCETve/fht0gbENGo+ShdZg4EenXWuHv+9PMQSCgeFIoHheJBoXhQKB4UigeF4kGheFAoHhSKB4XiQaF4UCgeFIoHheJBoXhQ/q34z9fvHwU6WfLDVfEiZFXKDfFZbnXXN0LxitVd38g18fIR9enSeaaazXIre76Vq+IHKx+080w1m+VW9nwrV8TLB9Qf0f62jL7ORflO1pLlov64Sx+LVxOirD2WWe8E18RrZi/g1aN8J+uR5TrzbS2aXcllmWj2Dn8iXqjWBp2Xn/U0ksuOxqtpdC/KeTNnVOfscly8LOgt6dVnL7OTjchynTsF3Y+y3szZ3OqcXa6Jj47G/tbsZCOyXOdOQfejrFeXmj4a29PnJEfFZwvafpbVdLIRWa5zp6D7UbYyozLnNBSv6Nwp6H6UzWYIlTmnOS4+w2a8Z6QW1S1R1iPLdebbmpeLapYs4z2zyzHxslxlQS83arpnM4NO1pLlov64Sx8PL2OzNmP7g0pmh+P/3JF3QPGgUDwoFA8KxYNC8aBQPCgUDwrFg0LxoFA8KBQPCsWDQvGgUDwoFA/J83wD8MfI9UY63AUAAAAASUVORK5CYII=" InformativeScreenshot="965e99056c3494be60556a27049d39aa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='KC House Listing' /&gt;" SearchSteps="FuzzySelector, Image" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="410,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;House List Uploading Completed&quot;]" />
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1928, -182, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="cf1d58b1b28c573dc2f7e2cf1e4884d4.png" Selector="&lt;html app='chrome.exe' title='KC House Listing'/&gt;" Url="http://localhost:8080/house/add" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
